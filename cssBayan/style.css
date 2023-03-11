@@ -6,9 +6,11 @@
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     color: rgb(35, 134, 126);
-    transition: 0.3s all ease-out;
+    transition: 0.4s all ease-out;
   }
-
+.wrapper {
+    background-color: rgb(201, 230, 255);
+}
   img {
     width: 100%;
     height: auto;
@@ -21,17 +23,22 @@
     color: rgb(0, 181, 194);
   }
   .accordion {
-    padding: 20px;
-    width: 80%;
+    padding: 1.25rem;
+    width: 75%;
     display: table;
     margin: 0 auto;
     cursor: pointer;
   }
-  .accordion:hover .header{
+  .accordion:hover .item-title{
     color:black;
   }
   .accordion input {
     display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .content {
     display: flex;
@@ -39,13 +46,13 @@
     align-items: center;
   }
   .img__wrapper {
-    width: 100%;
+    width: 48%;
     height: auto;
-    max-width: 440px;
+    max-width: 27.5rem;
   }
 
   .accordion-item {
-    margin: 10px auto;
+    margin: 0.62rem auto;
   }
   
   .accordion-item .header {
@@ -61,9 +68,10 @@
     height: 56px;
     overflow: hidden;
   }
-  /* .arrow {
-
-  } */
+  .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
   
   input[id="one"]:checked ~ label[for="one"],
   input[id="two"]:checked ~ label[for="two"],
@@ -88,7 +96,20 @@
   }
 
 
+  label[for="one"]:hover .arrow,
+  label[for="two"]:hover .arrow,
+  label[for="three"]:hover .arrow,
+  label[for="four"]:hover .arrow{
+    transform: rotate(180deg);
+  }
 
+  
+  input[id="one"]:checked ~ label[for="one"] > .header .arrow,
+  input[id="two"]:checked ~ label[for="two"] > .header .arrow,
+  input[id="three"]:checked ~ label[for="three"] > .header .arrow,
+  input[id="four"]:checked ~ label[for="four"] > .header .arrow{
+    transform: rotate(180deg);
+  }
     /* label[for="one"]:hover .header,
   label[for="two"]:hover .header,
   label[for="three"]:hover .header,
