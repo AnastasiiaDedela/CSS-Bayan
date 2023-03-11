@@ -6,18 +6,29 @@
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     color: rgb(35, 134, 126);
+    transition: 0.3s all ease-out;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0 auto;
     text-align: center;
     color: rgb(0, 181, 194);
   }
   .accordion {
     padding: 20px;
-    max-width: 80%;
+    width: 80%;
     display: table;
     margin: 0 auto;
+    cursor: pointer;
+  }
+  .accordion:hover .header{
+    color:black;
   }
   .accordion input {
     display: none;
@@ -28,19 +39,18 @@
     align-items: center;
   }
   .img__wrapper {
-    max-width: 50%;
-    height: auto;
-  }
-  .img__wrapper img {
     width: 100%;
+    height: auto;
+    max-width: 440px;
   }
+
   .accordion-item {
     margin: 10px auto;
   }
   
   .accordion-item .header {
-    border-top: 1px solid rgb(181, 179, 179);
-    padding: 5px;
+    border-top: 1.3px solid rgba(189, 187, 187, 0.819);
+    padding: 15px 0;
     cursor: pointer;
     max-width: 75%;
     margin: 0 auto;
@@ -48,20 +58,40 @@
   
   .accordion-item label {
     display: block;
-    /* height: 36px; */
-
+    height: 56px;
+    overflow: hidden;
   }
+  /* .arrow {
+
+  } */
   
-  input[id="one"]:checked ~ .accordion-item > label[for="one"],
-  input[id="two"]:checked ~ .accordion-item > label[for="two"],
-  input[id="three"]:checked ~ .accordion-item > label[for="three"],
-  input[id="four"]:checked ~ .accordion-item > label[for="four"]{
-    height: 80px;
+  input[id="one"]:checked ~ label[for="one"],
+  input[id="two"]:checked ~ label[for="two"],
+  input[id="three"]:checked ~ label[for="three"],
+  input[id="four"]:checked ~ label[for="four"]{
+    height: 380px;
   }
   
   label[for="one"]:hover,
   label[for="two"]:hover,
   label[for="three"]:hover,
   label[for="four"]:hover{
-    height: 80px;
+    height: 380px;
   }
+
+  
+  input[id="one"]:checked ~ label[for="one"] > .header,
+  input[id="two"]:checked ~ label[for="two"] > .header,
+  input[id="three"]:checked ~ label[for="three"] > .header,
+  input[id="four"]:checked ~ label[for="four"] > .header{
+    color: black;
+  }
+
+
+
+    /* label[for="one"]:hover .header,
+  label[for="two"]:hover .header,
+  label[for="three"]:hover .header,
+  label[for="four"]:hover .header {
+    color: red;
+  } */
