@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(35, 134, 126);
+    transition: 0.4s all ease-out;
+  }
+.wrapper {
+    background-color: rgba(237, 246, 255, 0.692);
+    min-height: 100vh;
+}
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 auto;
+    /* text-align: center; */
+    color: rgb(0, 181, 194);
+    width: 75%;
+  }
+  .accordion {
+    padding: 1.25rem;
+    width: 75%;
+    display: table;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .accordion input {
+    display: none;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img__wrapper {
+    width: 48%;
+    height: auto;
+    max-width: 27.5rem;
+  }
+
+  .accordion-item {
+    margin: 0.62rem auto;
+  }
+  
+  .accordion-item .header {
+    border-top: 0.08125rem solid rgba(189, 187, 187, 0.819);
+    padding: 0.9375rem 0;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+  
+  .accordion-item label {
+    display: block;
+    height: 2.7rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    visibility: hidden;
+  }
+ 
+ .item-title {
+    font-size: 1.3rem;
+ }
+  
+    .accordion:hover .item-title{
+        color:black;
+      }
+    .accordion:hover .arrow{  
+        visibility: visible;
+      }
+      
+      input[id="one"]:checked ~ label[for="one"],
+      input[id="two"]:checked ~ label[for="two"],
+      input[id="three"]:checked ~ label[for="three"],
+      input[id="four"]:checked ~ label[for="four"]{
+        height: 23.75rem;
+      }
+      
+      label[for="one"]:hover,
+      label[for="two"]:hover,
+      label[for="three"]:hover,
+      label[for="four"]:hover{
+        height: 23.75rem;
+      }
+    
+      
+      input[id="one"]:checked ~ label[for="one"] > .header .item-title,
+      input[id="two"]:checked ~ label[for="two"] > .header .item-title,
+      input[id="three"]:checked ~ label[for="three"] > .header .item-title,
+      input[id="four"]:checked ~ label[for="four"] > .header .item-title{
+        color: black;
+      }
+    
+    
+      label[for="one"]:hover .arrow,
+      label[for="two"]:hover .arrow,
+      label[for="three"]:hover .arrow,
+      label[for="four"]:hover .arrow{
+        transform: rotate(180deg);
+      }
+    
+      
+      input[id="one"]:checked ~ label[for="one"] > .header .arrow,
+      input[id="two"]:checked ~ label[for="two"] > .header .arrow,
+      input[id="three"]:checked ~ label[for="three"] > .header .arrow,
+      input[id="four"]:checked ~ label[for="four"] > .header .arrow{
+        transform: rotate(180deg);
+        visibility: visible;
+      }
+
+
+
+
+@media (min-width:320px) {
+    h1 {
+        font-size: 1.3rem;
+    };
+    .item-title{
+        font-size: 0.7;
+    }
+}
+
+@media (min-width:820px) {
+    h1 {
+        font-size: 1.8rem;
+    };
+    .item-title{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:1920px) {
+    h1 {
+        font-size: 2rem;
+    };
+    .item-title{
+        font-size: 1.3rem;
+    }
+}
